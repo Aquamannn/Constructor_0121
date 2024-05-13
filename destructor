@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+class angka {
+private:
+	int* arr;
+	int panjang;
+public:
+	angka(int);
+	~angka();
+	void cetakData();
+	void isiData();
+
+};
+
+angka::angka(int i) {
+	panjang = 1;
+	arr = new int;
+	isiData;
+}
+
+angka::~angka() {
+	cout << endl;
+	cetakData();
+	delete[]arr;
+	cout << "Alamat array sudah dilepaskan " << endl;
+}
+
+void angka::cetakData() {
+	for (int i = 1; i <= panjang; i++) {
+		cout << i << " = "; cin >> arr[i];
+	}
+	cout << endl;
+}
+
+int main() {
+	angka belajarccp(3);
+	angka* ptrBelajarccp = new angka(5);
+	delete ptrBelajarccp;
+
+	return 0;
+}
