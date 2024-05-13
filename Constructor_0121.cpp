@@ -38,6 +38,10 @@ int main()
 	mahasiswa mhs3("Park Sae Royi");
 	mahasiswa mhs4("Kim Da Mi");
 
-
+	mhs1.printALL();
+	mhs2.printALL();
+	mhs3.printALL();
+	mhs4.printALL();
+	return 0;
 }
 
