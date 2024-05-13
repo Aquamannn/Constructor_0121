@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+
+class mahasiswa
+{
+private:
+	static long long int nim;
+public:
+	long long int id;
+	string nama;
+
+	void setID();
+	void printALL();
+
+	static void setNim(int pNim) { nim = pNim; }
+	static int getNim() { return nim; }
+
+	mahasiswa(string pnama)
+	{
+		nama = pnama;
+		setID();
+	}
+
+};
+
+long long int mahasiswa::nim = 20230140120;
+
+void mahasiswa::setID()
+{
+	id = ++nim;
+}
+
+void mahasiswa::printALL()
+{
+	cout << "ID = " << id << endl;
+	cout << "Nama = " << nama << endl;
+	cout << endl;
+}
+
+int main() {
+	mahasiswa mhs1("Muhammad Razzin Ayyuri");
+	mahasiswa mhs2("Kim Da Mi");
+	mahasiswa mhs2("Kim Da Mi");
+	mahasiswa mhs3("Kim Ji Yeon");
+	mahasiswa mhs4("Kim Hye Yoon");
+
+	mhs1.printALL();
+	mhs2.printALL();
+	mhs3.printALL();
+	mhs4.printALL();
+
+	cout << "akses dari luar object = " << mahasiswa::getNim() << endl;
+	return 0;
+
+}
