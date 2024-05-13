@@ -31,3 +31,13 @@ void mahasiswa::printALL()
 
 }
 
+int main()
+{
+	mahasiswa mhs1("Lia Kurnia");
+	mahasiswa mhs2("Kafka Hibino");
+	mahasiswa mhs3("Park Sae Royi");
+	mahasiswa mhs4("Kim Da Mi");
+
+
+}
+
